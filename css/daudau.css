@@ -1,6 +1,9 @@
 #slider h2 {
 	color: #002e5b;
 }
+.swiper_wrapper {
+	height: 700px;
+}
 .heading-block {
 	margin-bottom: 0px;
 }
