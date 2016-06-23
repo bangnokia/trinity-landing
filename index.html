@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="SemiColonWeb" />
+    <!-- Stylesheets
+    ============================================= -->
+    <!-- <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" /> -->
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <link rel="stylesheet" href="css/dark.css" type="text/css" />
+    <link rel="stylesheet" href="css/font-icons.css" type="text/css" />
+    <link rel="stylesheet" href="css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css" />
+    <link rel="stylesheet" href="css/responsive.css" type="text/css" />
+    <link rel="stylesheet" href="css/daudau.css" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link href="favicon.ico" rel="shortcut icon"/>
+
+    <!--[if lt IE 9]>
+    	<script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
+    <!-- External JavaScripts
+    ============================================= -->
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/plugins.js"></script>
+    <!-- Document Title
+    ============================================= -->
+    <title>Trinity landig page</title>
+</head>
+
+<body class="stretched">
+    <!-- Document Wrapper
+    ============================================= -->
+    <div id="wrapper" class="clearfix">
+        <!-- Header
+        ============================================= -->
+        <header id="header" class="full-header light">
+            <div id="header-wrap">
+                <div class="container clearfix">
+                    <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+                    <!-- Logo
+                    ============================================= -->
+                    <div id="logo">
+                        <a href="index.html" class="standard-logo" data-dark-logo="images/trinity-logo.png"><img src="images/trinity-logo.png" alt="Trinity logo"></a>
+                        <a href="index.html" class="retina-logo" data-dark-logo="images/trinity-logo.png"><img src="images/trinity-logo.png" alt="Trinity logo"></a>
+                    </div>
+                    <!-- #logo end -->
+                    <!-- Primary Navigation
+                    ============================================= -->
+                    <nav id="primary-menu">
+                        <ul>
+                            <li>
+                                <a href="index.html">
+                                    <div>Home</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-scrollto="#teacher">
+                                    <div>Giảng viên</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-scrollto="#benefit">
+                                    <div>Lợi ích</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-scrollto="#dd-course">
+                                    <div>Khóa học</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-scrollto="#schedule">
+                                    <div>Lịch khai giảng</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-scrollto="#register">
+                                    <div>Đăng kí</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" data-scrollto="#contact">
+                                    <div>Liên hệ</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- #primary-menu end -->
+                </div>
+            </div>
+        </header>
+        <!-- #header end -->
+        <section id="slider" class="slider-parallax swiper_wrapper clearfix">
+            <div class="swiper-container swiper-parent">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide light" style="background-image: url('images/bg4.jpg');">
+                        <div class="container clearfix">
+                            <div class="slider-caption slider-caption-left">
+                                <h2 data-caption-animate="fadeInUp">Tăng tốc ielts hè 2016</h2>
+                                <ul class="iconlist">
+                                    <li><i class="icon icon-check"></i> 100% giáo viên bản ngữ 10 năm kinh nghiệm</li>
+                                    <li><i class="icon icon-check"></i> Tặng tới 1 triệu đồng cho mỗi khoá học</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+            jQuery(document).ready(function($) {
+                var swiperSlider = new Swiper('.swiper-parent', {
+                    paginationClickable: false,
+                    slidesPerView: 1,
+                    grabCursor: true,
+                    onSwiperCreated: function(swiper) {
+                        $('[data-caption-animate]').each(function() {
+                            var $toAnimateElement = $(this);
+                            var toAnimateDelay = $(this).attr('data-caption-delay');
+                            var toAnimateDelayTime = 0;
+                            if (toAnimateDelay) {
+                                toAnimateDelayTime = Number(toAnimateDelay) + 750;
+                            } else {
+                                toAnimateDelayTime = 750;
+                            }
+                            if (!$toAnimateElement.hasClass('animated')) {
+                                $toAnimateElement.addClass('not-animated');
+                                var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+                                setTimeout(function() {
+                                    $toAnimateElement.removeClass('not-animated').addClass(elementAnimation + ' animated');
+                                }, toAnimateDelayTime);
+                            }
+                        });
+                    },
+                    onSlideChangeStart: function(swiper) {
+                        $('#slide-number-current').html(swiper.activeIndex + 1);
+                        $('[data-caption-animate]').each(function() {
+                            var $toAnimateElement = $(this);
+                            var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+                            $toAnimateElement.removeClass('animated').removeClass(elementAnimation).addClass('not-animated');
+                        });
+                    },
+                    onSlideChangeEnd: function(swiper) {
+                        $('#slider .swiper-slide').each(function() {
+                            if ($(this).find('video').length > 0) {
+                                $(this).find('video').get(0).pause();
+                            }
+                        });
+                        $('#slider .swiper-slide:not(".swiper-slide-active")').each(function() {
+                            if ($(this).find('video').length > 0) {
+                                if ($(this).find('video').get(0).currentTime != 0) $(this).find('video').get(0).currentTime = 0;
+                            }
+                        });
+                        if ($('#slider .swiper-slide.swiper-slide-active').find('video').length > 0) {
+                            $('#slider .swiper-slide.swiper-slide-active').find('video').get(0).play();
+                        }
+
+                        $('#slider .swiper-slide.swiper-slide-active [data-caption-animate]').each(function() {
+                            var $toAnimateElement = $(this);
+                            var toAnimateDelay = $(this).attr('data-caption-delay');
+                            var toAnimateDelayTime = 0;
+                            if (toAnimateDelay) {
+                                toAnimateDelayTime = Number(toAnimateDelay) + 300;
+                            } else {
+                                toAnimateDelayTime = 300;
+                            }
+                            if (!$toAnimateElement.hasClass('animated')) {
+                                $toAnimateElement.addClass('not-animated');
+                                var elementAnimation = $toAnimateElement.attr('data-caption-animate');
+                                setTimeout(function() {
+                                    $toAnimateElement.removeClass('not-animated').addClass(elementAnimation + ' animated');
+                                }, toAnimateDelayTime);
+                            }
+                        });
+                    }
+                });
+
+                $('#slider-arrow-left').on('click', function(e) {
+                    e.preventDefault();
+                    swiperSlider.swipePrev();
+                });
+
+                $('#slider-arrow-right').on('click', function(e) {
+                    e.preventDefault();
+                    swiperSlider.swipeNext();
+                });
+
+                $('#slide-number-current').html(swiperSlider.activeIndex + 1);
+                $('#slide-number-total').html(swiperSlider.slides.length);
+            });
+            </script>
+        </section>
+        <!-- Content
+        ============================================= -->
+        <section id="content">
+            <div class="content-wrap">
+                <div class="promo promo-full promo-border header-stick bottommargin-lg">
+                    <div class="container clearfix">
+                        <h3>Học thử <span>FREE</span> cùng giáo viên bản ngữ với <span>10 năm kinh nghiệm</span> dạy ielts</h3>
+                        <a href="#" data-scrollto="#register" class="button button-3d button-red button-xlarge nobottommargin button-cta"><i class="icon-star3"></i>Đăng kí miễn phí</a>
+                    </div>
+                </div>
+
+                <!-- start teacher -->
+                <div class="container clear-fix center" id="teacher">
+					<div class="heading-block">
+                        <h2>Giảng viên</h2>
+                        <p>Bằng cấp và kinh nghiệm trên 7 năm dạy IELTS <br/>Giảng viên cam kết sẽ theo hết khóa học để đảm bảo chất lượng đầu ra của học viên</span>
+                    </div>
+                    <div class="divider divider-short divider-center"><i class="icon-email2"></i></div>
+                	<div id="oc-team" class="owl-carousel team-carousel bottommargin">
+
+                        <div class="oc-item">
+                            <div class="team">
+	                            <div class="team-image">
+	                                <img src="images/teacher/andy.jpg" alt="teacher andy">
+	                            </div>
+	                            <div class="team-desc">
+	                                <div class="team-title"><h4>Thầy Andy</h4><span>/ Anh ngữ TRINITY</span></div>
+	                           	</div>
+                            </div>
+                            <div class="team-content text-left">
+								<ul class="iconlist nobottommargin">
+	                                <li><i class="icon-trophy"></i>Là giám đốc học thuật - sáng lập anh ngữ TRINITY </li>
+	                                <li><i class="icon-trophy"></i>Cử nhân tại trường đại học  Volverhampton</li>
+	                                <li><i class="icon-trophy"></i>Chứng chỉ TESOL (“Teaching English to Speakers of Other Languages”)</li>
+	                                <li><i class="icon-trophy"></i><span class="text-red">Giảng viên IELTS 12 năm tại Việt Nam</span></li>
+	                            </ul>
+							</div>
+                        </div>
+
+                        <div class="oc-item">
+                            <div class="team">
+	                            <div class="team-image">
+	                                <img src="images/teacher/teacher.png" alt="teacher andy">
+	                            </div>
+	                            <div class="team-desc">
+	                                <div class="team-title"><h4>Cô Ursula</h4><span>/ Anh ngữ TRINITY</span></div>
+	                           	</div>
+                            </div>
+                            <div class="team-content text-left">
+								<ul class="iconlist nobottommargin">
+	                                <li><i class="icon-trophy"></i>Cử nhân tại University of South Africa</li>
+	                                <li><i class="icon-trophy"></i>Hoàn thành chứng chỉ giảng dạy quốc tế TEFL năm 2009</li>
+	                                <li><i class="icon-trophy"></i>Hoàn thành chứng chỉ quốc tế TESOL</li>
+	                                <li><i class="icon-trophy"></i>7 năm kinh nghiệm dạy tiếng anh tại Việt Nam với rất nhiều học viên đạt IELTS từ 7.0-8.5</li>
+	                            </ul>
+							</div>
+                        </div>
+
+                        <div class="oc-item">
+                            <div class="team">
+	                            <div class="team-image">
+	                                <img src="images/teacher/teacher.png" alt="teacher andy">
+	                            </div>
+	                            <div class="team-desc">
+	                                <div class="team-title"><h4>Thầy David</h4><span>/ Anh ngữ TRINITY</span></div>
+	                           	</div>
+                            </div>
+                            <div class="team-content text-left">
+								<ul class="iconlist nobottommargin">
+	                                <li><i class="icon-trophy"></i>Tốt nghiệp trường University of British Columbia</li>
+	                                <li><i class="icon-trophy"></i>20 năm gắn bó với nghề dạy học, đào tạo những chứng chỉ như IELTS, TOEFL, TOEIC, GMAT and GRE</li>
+	                                <li><i class="icon-trophy"></i>Rất nhiều học viên đạt IELTS từ 7.0 trở lên</li>
+	                            </ul>
+							</div>
+                        </div>
+                    </div>
+                </div>
+                 <script type="text/javascript">
+
+                    jQuery(document).ready(function($) {
+
+                        var ocTeam = $("#oc-team");
+
+                        ocTeam.owlCarousel({
+                            responsive:{
+                                0:{ items:1 },
+                                600:{ items:2 },
+                                1000:{ items:3 }
+                            },
+                            margin: 30,
+                            nav: true,
+                            navText : ['<i class="icon-angle-left"></i>','<i class="icon-angle-right"></i>'],
+                            dots:false
+                        });
+
+                    });
+
+                </script>
+
+                    
+                <div class="clear"></div>
+                <!-- end teacher -->
+
+                <!-- student benefit -->
+                <div class="section bgcolor noborder nomargin" id="dd-student">
+                    <div class="container clearfix" id="benefit">
+    					<div class="heading-block center">
+    	                    <h2>Lợi ích của học viên</h2>
+    	                </div>
+                        <div class="divider divider-short divider-center"><i class="icon-email2"></i></div>
+
+                        <div class="col_one_third">
+                            <div class="feature-box fbox-effect">
+                                <div class="fbox-icon">
+                                    <a href="#"><i class="icon-comment icon-orange i-alt"></i></a>
+                                </div>
+                                <h3>Sự quan tâm</h3>
+                                <p>Từ 10-15 học viên/lớp (nói & viết) được quan tâm giúp đỡ như nhau, được đánh giá và góp ý về trình độ của mình</p>
+                            </div>
+                        </div>
+                        <div class="col_one_third">
+                            <div class="feature-box fbox-effect">
+                                <div class="fbox-icon">
+                                    <a href="#"><i class="icon-comments icon-orange i-alt"></i></a>
+                                </div>
+                                <h3>Tương tác nhiều</h3>
+                                <p>Cơ hội được thực hành, tham gia, phát biểu ý kiến & trao đổi với GV trong lớp là như nhau</p>
+                            </div>
+                        </div>
+                        <div class="col_one_third col_last">
+                            <div class="feature-box fbox-effect">
+                                <div class="fbox-icon">
+                                    <a href="#"><i class="icon-bolt icon-orange i-alt"></i></a>
+                                </div>
+                                <h3>Biết thêm các tricks</h3>
+                                <p>Được thực hành các tips, các kỹ năng để giảm áp lực khi đi thi </p>
+                            </div>
+                        </div>
+                        <div class="col_one_third">
+                            <div class="feature-box fbox-effect">
+                                <div class="fbox-icon">
+                                    <a href="#"><i class="icon-folder-open icon-orange i-alt"></i></a>
+                                </div>
+                                <h3>Tài liệu độc</h3>
+                                <p>Những tài liệu học và thi IELTS “Độc” chỉ có tại Trinity.</p>
+                            </div>
+                        </div>
+                        <div class="col_one_third">
+                            <div class="feature-box fbox-effect">
+                                <div class="fbox-icon">
+                                    <a href="#"><i class="icon-refresh icon-orange i-alt"></i></a>
+                                </div>
+                                <h3>Hỗ trợ tận tình</h3>
+                                <p>Giáo viên sẽ hỗ trợ học viên đến khi nhận được điểm số IELTS mong muốn.</p>
+                            </div>
+                        </div>
+                        <div class="col_one_third col_last">
+                            <div class="feature-box fbox-effect">
+                                <div class="fbox-icon">
+                                    <a href="#"><i class="icon-flag icon-orange i-alt"></i></a>
+                                </div>
+                                <h3>Giảng dạy tận tâm</h3>
+                                <p>Không thay đổi giáo viên cho đến khi kết thúc khóa học. Các khoá học theo gói đảm bảo điểm số cho học viên</p>
+                            </div>
+                        </div>
+                        
+                        <div class="clear"></div>
+                        <div class="center bottommargin">
+                        	<a href="#" data-scrollto="#register" class="button button-3d button-teal button-xlarge nobottommargin button-cta"><i class="icon-user2"></i>Đăng kí kiểm tra đầu vào miễn phí</a> 
+                        </div>                    
+
+                    </div>
+                </div>
+                <!-- end student benefit -->
+
+                <!-- start cource -->
+                <div class="section nomargin noborder bgcolor light" style="padding: 80px 0;" id="dd-course">
+                    <div class="container center clearfix">
+
+                        <div class="heading-block">
+                            <h2>Các khóa học tại TRINITY</h2>
+                        </div>
+                        <div class="divider divider-short divider-center"><i class="icon-email2"></i></div>
+
+                        <!-- <ul class="process-steps process-5 clearfix dd-step">
+                        <li>
+                            <a href="#" class="i-bordered i-circled divcenter">Step 1</a>
+                            <h5>Review Cart</h5>
+                        </li>
+                        <li>
+                            <a href="#" class="i-bordered i-circled divcenter"></a>
+                            <h5>Review Cart</h5>
+                        </li>
+                        <li>
+                            <a href="#" class="i-bordered i-circled divcenter"></a>
+                            <h5>Review Cart</h5>
+                        </li>
+                        <li>
+                            <a href="#" class="i-bordered i-circled divcenter"></a>
+                            <h5>Review Cart</h5>
+                        </li>
+                        <li>
+                            <a href="#" class="i-bordered i-circled divcenter"></a>
+                            <h5>Review Cart</h5>
+                        </li>
+                                            </ul> -->
+                      
+						<div class="col_one_third">
+                              <div class="feature-box fbox-center fbox-bg fbox-border fbox-effect">
+                                  <div class="fbox-icon">
+                                      <a href="#"><i class="i-alt">1</i></a>
+                                  </div>
+                                  <div class="fancy-title title-bottom-border">
+                                      <h3>PRE IELTS 1</h3>
+                                  </div>                                
+                                  <div class="descriptioin">
+                                      <ul class="iconlist">
+                                          <li><i class="icon-ok-sign"></i>Tạo bước nền vững chắc về tiếng anh</li>
+                                          <li><i class="icon-ok-sign"></i>Rèn luyện khả năng giao tiếp tự nhiên</li>
+                                          <li><i class="icon-ok-sign"></i>Làm quen với các chủ đề trong thi</li>
+                                          <li><i class="icon-ok-sign"></i>Học viên nắm vững cấu trúc đề thi</li>
+                                          <li><i class="icon-ok-sign"></i>Đạt điểm đầu ra từ 5.0 - 5.5 trở lên</li>
+                                      </ul>
+                                  </div>
+                                  <div class="center">
+                                      <a href="http://trinity.edu.vn/khoa-hoc/pre-ielts/khoa-preparation-for-ielts" target="_blank" class="button button-3d button-dirtygreen button-large nobottommargin"><i class="icon-rocket"></i>Chi tiết</a> 
+                                  </div>                                
+                              </div>
+                          </div>
+  
+                          <div class="col_one_third">
+                              <div class="feature-box fbox-center fbox-bg fbox-border fbox-effect">
+                                  <div class="fbox-icon">
+                                      <a href="#"><i>2</i></a>
+                                  </div>
+                                  <div class="fancy-title title-bottom-border">
+                                      <h3>PRE IELTS 2</h3>
+                                  </div>
+                                  <div class="descriptioin">
+                                      <ul class="iconlist">
+                                          <li><i class="icon-ok-sign"></i>Tạo bước nền vững chắc về tiếng anh</li>
+                                          <li><i class="icon-ok-sign"></i>Rèn luyện khả năng giao tiếp tự nhiên</li>
+                                          <li><i class="icon-ok-sign"></i>Làm quen với các chủ đề trong thi</li>
+                                          <li><i class="icon-ok-sign"></i>Học viên nắm vững cấu trúc đề thi</li>
+                                          <li><i class="icon-ok-sign"></i>Đạt điểm đầu ra từ 5.0 - 5.5 trở lên</li>
+                                      </ul>
+                                  </div>
+                                  <div class="center">
+                                      <a href="http://trinity.edu.vn/khoa-hoc/pre-ielts/khoa-preparation-for-ielts" target="_blank" class="button button-3d button-dirtygreen button-large nobottommargin"><i class="icon-rocket"></i>Chi tiết</a> 
+                                  </div>    
+                              </div>
+                          </div>
+  
+                          <div class="col_one_third col_last">
+                                <div class="feature-box fbox-center fbox-bg fbox-border fbox-effect">
+                                  <div class="fbox-icon">
+                                      <a href="#"><i class="i-alt">3</i></a>
+                                  </div>
+                                  <div class="fancy-title title-bottom-border">
+                                      <h3>IELTS Intensive</h3>
+                                  </div>
+                                  <div class="descriptioin">
+                                      <ul class="iconlist">
+                                          <li><i class="icon-ok-sign"></i>Tạo bước nền vững chắc về tiếng anh</li>
+                                          <li><i class="icon-ok-sign"></i>Rèn luyện khả năng giao tiếp tự nhiên</li>
+                                          <li><i class="icon-ok-sign"></i>Làm quen với các chủ đề trong thi</li>
+                                          <li><i class="icon-ok-sign"></i>Học viên nắm vững cấu trúc đề thi</li>
+                                          <li><i class="icon-ok-sign"></i>Đạt điểm đầu ra từ 5.0 - 5.5 trở lên</li>
+                                      </ul>
+                                  </div>
+                                  <div class="center">
+                                      <a href="http://trinity.edu.vn/khoa-hoc/ielts-intensive/lop-ielts-intensive" target="_blank" class="button button-3d button-dirtygreen button-large nobottommargin"><i class="icon-rocket"></i>Chi tiết</a> 
+                                  </div>    
+                              </div>
+                          </div>
+  
+                          <!-- <div class="divider divider-full divider-rounded divider-center"><i class="icon-star"></i></div> -->
+  
+                          <!-- speacial course -->
+                          <div class="heading-block">
+                              <h2>Các khóa ADVANCE</h2>
+                          </div>
+                          <div class="divider divider-short divider-center"><i class="icon-email2"></i></div>
+                          <div class="col_one_third col-md-offset-2">
+                              <div class="feature-box fbox-center fbox-bg fbox-outline fbox-effect dd-course-advance" data-animate="fadeInLeftBig">
+                                  <div class="fbox-icon">
+                                      <a href="#"><i class="i-alt">4</i></a>
+                                  </div>
+                                  <div class="fancy-title title-bottom-border">
+                                      <h3>SPEAKING</h3>
+                                  </div>                                
+                                  <div class="descriptioin">
+                                      <ul class="iconlist">
+                                          <li><i class="icon-ok-sign"></i>Tạo bước nền vững chắc về tiếng anh</li>
+                                          <li><i class="icon-ok-sign"></i>Rèn luyện khả năng giao tiếp tự nhiên</li>
+                                          <li><i class="icon-ok-sign"></i>Làm quen với các chủ đề trong thi</li>
+                                          <li><i class="icon-ok-sign"></i>Học viên nắm vững cấu trúc đề thi</li>
+                                          <li><i class="icon-ok-sign"></i>Đạt điểm đầu ra từ 5.0 - 5.5 trở lên</li>
+                                      </ul>
+                                  </div>
+                                  <div class="center">
+                                      <a href="http://trinity.edu.vn/khoa-hoc/speaking" target="_blank" class="button button-3d button-red button-large nobottommargin"><i class="icon-rocket"></i>Chi tiết</a> 
+                                  </div>                                
+                              </div>
+                          </div>
+  
+                          <div class="col_one_third">
+                              <div class="feature-box fbox-center fbox-bg fbox-outline fbox-effect dd-course-advance" data-animate="fadeInRightBig">
+                                  <div class="fbox-icon">
+                                      <a href="#"><i class="i-alt">5</i></a>
+                                  </div>
+                                  <div class="fancy-title title-bottom-border">
+                                      <h3>ESSENTIAL WRITING</h3>
+                                  </div>                                
+                                  <div class="descriptioin">
+                                      <ul class="iconlist">
+                                          <li><i class="icon-ok-sign"></i>Tạo bước nền vững chắc về tiếng anh</li>
+                                          <li><i class="icon-ok-sign"></i>Rèn luyện khả năng giao tiếp tự nhiên</li>
+                                          <li><i class="icon-ok-sign"></i>Làm quen với các chủ đề trong thi</li>
+                                          <li><i class="icon-ok-sign"></i>Học viên nắm vững cấu trúc đề thi</li>
+                                          <li><i class="icon-ok-sign"></i>Đạt điểm đầu ra từ 5.0 - 5.5 trở lên</li>
+                                      </ul>
+                                  </div>
+                                  <div class="center">
+                                      <a href="http://trinity.edu.vn/khoa-hoc/writing" target="_blank" class="button button-3d button-red button-large nobottommargin"><i class="icon-rocket"></i>Chi tiết</a> 
+                                  </div>                                
+                              </div>
+                          </div>            
+	                    <!-- end speacial -->
+			
+                    <!-- test other -->
+	                    <div class="clear"></div>
+                    <!-- end test other -->
+                	</div>
+           		</div>
+                <!-- end course -->
+
+	            <!-- schedule for register -->
+                <div class="section nomargin noborder">
+    	            <div class="container center clear-fix" id="schedule">
+    	            	<div class="heading-block center">
+    	                    <h2>Lịch khai giảng</h2>
+    	                </div>
+                        <div class="divider divider-short divider-center"><i class="icon-email2"></i></div>
+                        <div class="table-responsive">
+    	                <table class="table table-hover">
+    	                	<thead>
+    	                		<tr class="warning">
+    	                			<th>Course</th>
+    		                		<th>PRE IELTS 1</th>
+    		                		<th>PRE IELTS 2</th>
+    		                		<th>IELTS INTENSIVE</th>
+    		                		<th>SPEAKING</th>
+    		                		<th>ESSENTIAL WRITING</th>
+    	                		</tr>
+    	                	</thead>
+    	                	<tbody>
+    	                		<tr>
+    	                			<td>Tổng thời gian khóa học</td>
+    	                			<td>100 giờ</td>
+    	                			<td>100 giờ</td>
+    	                			<td>60 giờ</td>
+    	                			<td>30 giờ</td>
+    	                			<td>30 giờ</td>
+    	                		</tr>
+    	                		<tr>
+    	                			<td>Ngày học</td>
+    	                			<td>Thứ 2,3,5,6</td>
+    	                			<td>Thứ 2,3,5,6</td>
+    	                			<td>Thứ 3,5 hoặc thứ 2,6</td>
+    	                			<td>Thứ 2,6</td>
+    	                			<td>Thứ 2,6</td>
+    	                		</tr>
+    	                		<tr>
+    	                			<td>Thời gian học</td>
+    	                			<td>3 giờ/ buổi</td>
+    	                			<td>3 giờ/ buổi</td>
+    	                			<td>3 giờ/ buổi</td>
+    	                			<td>3 giờ/ buổi</td>
+    	                			<td>3 giờ/ buổi</td>
+    	                		</tr>
+    	                		<tr>
+    	                			<td>Giáo trình học tập</td>
+    	                			<td>free</td>
+    	                			<td>free</td>
+    	                			<td>free</td>
+    	                			<td>free</td>
+    	                			<td>free</td>
+    	                		</tr>
+    	                		<tr>
+    	                			<td>Lịch khai giảng tháng 6</td>
+    	                			<td>12/6</td>
+    	                			<td>17/6</td>
+    	                			<td>22/6</td>
+    	                			<td>27/6</td>
+    	                			<td>30/6</td>
+    	                		</tr>
+    	                		<tr>
+    	                			<td>Lịch khai giảng tháng 7</td>
+    	                			<td>1/7</td>
+    	                			<td>8/7</td>
+    	                			<td>15/7</td>
+    	                			<td>22/7</td>
+    	                			<td>25/7</td>
+    	                		</tr>
+    	                		<tr>
+    	                			<td>Bài nghe</td>
+    	                			<td>Shared online or burning into CD</td>
+    	                			<td>Shared online or burning into CD</td>
+    	                			<td>Shared online or burning into CD</td>
+    	                			<td></td>
+    	                			<td></td>
+    	                		</tr>
+    	                		<tr>
+    	                			<td>Học phí</td>
+    	                			<td>560 USD</td>
+    	                			<td>560 USD</td>
+    	                			<td>420USD</td>
+    	                			<td>290USD</td>
+    	                			<td>290USD</td>
+    	                		</tr>
+    	                	</tbody>
+    	                </table>
+                        </div>
+    	            </div>
+                </div>
+                <!-- end schedule for register -->
+
+	            <div class="promo promo-border promo-full promo-dark promo-center" id="dd-promo1">
+                    <div class="container clearfix">
+                        <h2>Đăng kí học thử <span>miễn phí</span> cùng <span>giáo viên bản ngữ</span></h2>
+                        <span>Đảm bảo bạn sẽ có những trải nghiệm cực kì mới mẻ trong phương pháp học IELTS</span>
+                        <a href="#register" class="button button-xlarge button-rounded button-cta"><i class="icon icon-rocket"></i>Đăng kí ngay</a>
+                    </div>
+                </div>
+                <div class="clear"></div>
+	            
+
+	            <!-- testimonal of learner -->
+	            <div class="section notopborder nomargin">
+	            	<div class="container center clear-fix">
+		            	<div class="heading-block">
+	                        <h2>Cảm nhận của học viên</h2>
+	                    </div>
+                        <div class="divider divider-short divider-center"><i class="icon-email2"></i></div>
+	                    <div class="testimonial">
+                            <div class="testi-content">
+                                <p>To BIG ZERO .Mr AndySure, knock on wood. If I have a second thought, I could study more at Trinity Center in several times. Thanks to my teachers (namely Finn, David, Olly, and of  course Andy ^.^ ) gave us a wide awakening in the horizontal of knowledge in English. There was the worthless time when I took an Intensive course as well as Pre Ielts2 and Extra Writing Course. From my point of view, Andy is really a friendly, competent teacher with high responsibility. One of the best my memories is that Andy often gave his students lovely names such as ‘teenager’ (for young lady), ‘stranger’ (students who absent a lot) or ‘Big Zero’ (for lazy students).</p>
+                                <div class="testi-meta">
+                                    Nguyen Viet Dung
+                                    <span>Study in Southampton - IELTS 8.0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial">
+                            <div class="testi-content">
+                                <p>Since I determined to take a real Ielts test after this course, I drew my own plan while studying at Trinity Center. I usually made an effort to arrive as early as possible in order to have time chatting with teachers, staffs and friends in English. This strategy was called “one stone kills two birds”, as I was able to avoid traffic jams and improve my speaking skill, which is the hardest skill to get better soon. That was such valuable time to spend with Mr Andy and Mr Olly, which were known as “Big Zero” and “ Big teenager” respectively. Andy is specially obsessed with teenagers that he still call us “strangers” in a loveliest way as we are not strange at all. </p>
+                                <div class="testi-meta">
+                                    Misa Corn
+                                    <span>Study in Southampton - IELTS 8.0 / Teacher at NEU</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial">
+                            <div class="testi-content">
+                                <p>Đến với Trinity như một cái duyên và học ở Trinity như một cơ hội của mình. Về Trinity, có một cảm nhận đặc biệt khi bước chân vào đây. Về cơ sở vật chất hết sức bình thường, nhưng khi được tiếp đón và bước chân vào lớp học và tương tác với thầy Andy lần đầu tiên khi kiểm tra đầu vào thì mình cảm thấy hết sức "choáng váng". Choáng váng bởi sự nhiệt tình giàu kinh nghiệm của thầy, không hiểu vì sao mình lại hiểu hết được những gì thầy truyền đạt cho mình ngày hôm đó (đến tận bây giờ mình cũng không thể hiểu được vì sao, chắc thầy có phép thuật cao siêu gì), vì mình là một người khá là kém về tiếng anh, đã học qua nhiều trung tâm nhưng thực sự chưa gặt được chút kết quả nào. Sự lựa chọn này đến với mình không hề sai lầm, kết quả là mình được 7.5 sau một khoá học của thầy, không khỏi "choáng váng" lần nữa và mình không biết nói gì hơn là cảm ơn Trinity, cảm ơn Super Hero - Mr.Andy</p>
+                                <div class="testi-meta">
+                                    Nguyen Phuc Hoang Nam
+                                    <span>Du học sinh tại Anh - IELTS 7.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+	            </div>
+	            <!-- end testimonal of learner -->
+
+	            <!-- register -->
+	            <div class="section bgcolor nomargin light" id="register">
+	            	<div class="container center clear-fix">
+	            		<div class="heading-block">
+	                        <h2 style="color:#fff">Đăng ký kiểm tra đầu vào miễn phí<br/> cùng giáo viên bản ngữ ngay</h2>
+	                    </div>
+                        <div class="divider divider-short divider-center"><i class="icon-email2"></i></div>
+		            	<form class="landing-wide-form dark nobottommargin clearfix col-md-6 col-md-offset-3" action="https://docs.google.com/forms/d/13F4NceDgiiVSXdwX0Obiva9jBGNSsxj3K6X-rkg3yR4/formResponse" method="post" role="form" id="register-form">
+		                    
+		                    <div class="col_full">
+		                        <input class="form-control input-lg not-dark" id="r-hoten" name="entry.444570587" value="" placeholder="Họ và tên*" type="text" required>
+		                    </div>
+		                    <div class="col_full">
+		                        <input class="form-control input-lg not-dark" id="r-email" name="entry.1115872262" value="" placeholder="Địa chỉ email*" type="email" required>
+		                    </div>
+		                    <div class="col_full">
+		                        <input class="form-control input-lg not-dark" id="r-phone" name="entry.1155859684" value="" placeholder="Số điện thoại*" type="text" required>
+		                    </div>
+		                    <div class="col_full nobottommargin">
+		                        <button class="btn btn-lg btn-danger btn-block nomargin button-cta" value="submit" type="submit" style="" id="register-button">ĐĂNG KÍ</button>
+		                    </div>
+		                    <br>
+		                    <div class="style-msg successmsg" id="on-register-success">
+                                <div class="sb-msg"><i class="icon-thumbs-up"></i><strong>Đăng kí thành công!</strong> TRINITY sẽ liên hệ với bạn trong vòng 24h.</div>
+                            </div>
+                            <div class="style-msg errormsg" id="on-register-error">
+                                <div class="sb-msg"></i>Bạn vui lòng nhập đầy đủ thông tin.</div>
+                            </div>
+		                </form>
+	                </div>
+	            </div>
+                <script>
+                    $(document).ready(function() {
+                        $('#register-button').click(function(e) {
+                            e.preventDefault();
+                            var Rhoten = $('#r-hoten');
+                            var Remail = $('#r-email');
+                            var Rphone = $('#r-phone');
+                            if ( Rhoten.val().length == 0 ||  Remail.val().length == 0 || Rphone.val().length == 0 ) {
+                                $('#on-register-error').show();
+                            } else {
+                                $.ajax({
+                                    method: 'POST',
+                                    url: 'https://docs.google.com/forms/d/13F4NceDgiiVSXdwX0Obiva9jBGNSsxj3K6X-rkg3yR4/formResponse',
+                                    data: $('#register-form').serialize(),
+                                    type: 'jsonp',
+                                    success: function(res) {
+                                        console.log(res);
+                                    },
+                                    error: function(error) {
+                                        console.log(error);
+                                        $('#on-register-success').fadeIn();
+                                    }
+                                });
+                                $('#on-register-success').fadeIn();
+                                $('#on-register-error').hide();
+                            }
+                            
+                        });
+                    });
+                </script>
+	            <!-- end register -->
+
+	            <!-- google map -->
+	            <div class="section nomargin nopadding" id="contact">
+	            	<div id="googleMap" style="width:100%;height:600px;"></div>
+	            	<script src="http://maps.googleapis.com/maps/api/js"></script>
+
+						<script>
+							var myCenter=new google.maps.LatLng(21.035533,105.819253);
+							var marker;
+
+							function initialize()
+							{
+								var mapProp = {
+								center:myCenter,
+								zoom:17,
+								mapTypeId:google.maps.MapTypeId.ROADMAP,
+								scrollwheel: false
+							 };
+
+							var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+							var marker=new google.maps.Marker({
+							  position:myCenter,
+							  animation:google.maps.Animation.BOUNCE
+							  });
+
+							marker.setMap(map);
+							}
+
+							google.maps.event.addDomListener(window, 'load', initialize);
+						</script>
+	            </div>
+	            <!-- end google map -->
+            </div>
+        </section>
+        <!-- Footer
+        ============================================= -->
+        <footer id="footer" class="dark">
+            <div class="container">
+                <!-- Footer Widgets
+                ============================================= -->
+               
+                <!-- .footer-widgets-wrap end -->
+            </div>
+            <!-- Copyrights
+            ============================================= -->
+            <div id="copyrights">
+                <div class="container clearfix">
+                    <div class="col_half">
+                        <p class="nomargin nopadding">Trụ sở chính: 8A Ngõ 283 Đội Cấn, Ba Đình, Hà Nội</p>
+                        <i class="icon-envelope2"></i> anhngutrinity@gmail.com <span class="middot">&middot;</span> <i class="icon-phone"></i> 0904 366 948 <br>
+                        Copyrights &copy; 2016 All Rights Reserved by <a href="http://trinity.edu.vn/">Trinity</a>.
+                    </div>
+                    <div class="col_half col_last tright">
+                        <div class="fright clearfix">
+                            <a href="#" class="social-icon si-small si-borderless si-facebook">
+                                <i class="icon-facebook"></i>
+                                <i class="icon-facebook"></i>
+                            </a>
+                            <a href="#" class="social-icon si-small si-borderless si-twitter">
+                                <i class="icon-twitter"></i>
+                                <i class="icon-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon si-small si-borderless si-gplus">
+                                <i class="icon-gplus"></i>
+                                <i class="icon-gplus"></i>
+                            </a>
+                            <a href="#" class="social-icon si-small si-borderless si-pinterest">
+                                <i class="icon-pinterest"></i>
+                                <i class="icon-pinterest"></i>
+                            </a>
+                            <a href="#" class="social-icon si-small si-borderless si-vimeo">
+                                <i class="icon-vimeo"></i>
+                                <i class="icon-vimeo"></i>
+                            </a>
+                            <a href="#" class="social-icon si-small si-borderless si-yahoo">
+                                <i class="icon-yahoo"></i>
+                                <i class="icon-yahoo"></i>
+                            </a>
+                            <a href="#" class="social-icon si-small si-borderless si-linkedin">
+                                <i class="icon-linkedin"></i>
+                                <i class="icon-linkedin"></i>
+                            </a>
+                        </div>
+                        <div class="clear"></div>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- #copyrights end -->
+        </footer>
+        <!-- #footer end -->
+    </div>
+    <!-- #wrapper end -->
+    <!-- Go To Top
+    ============================================= -->
+    <div id="gotoTop" class="icon-angle-up"></div>
+    <!-- Footer Scripts
+    ============================================= -->
+    <script type="text/javascript" src="js/functions.js"></script>
+</body>
+
+</html>

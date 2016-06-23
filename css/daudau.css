@@ -1,0 +1,141 @@
+#slider h2 {
+	color: #002e5b;
+}
+.heading-block {
+	margin-bottom: 0px;
+}
+.heading-block::after {
+	display: none;
+}
+.promo {
+	background-color: #1F8A70;
+}
+.promo h3 {
+	color: #fff;
+}
+.promo h3 span {
+	color: #FFE11A;
+}
+.button-cta {
+	background-color: #FD7400;
+}
+.text-red {
+	color: red;
+}
+.iconlist li {
+	margin-bottom: 5px;
+}
+.team:hover h4 {
+	color: red;
+	text-decoration: underline;
+}
+.icon-orange {
+	background-color: #FD7400 !important;
+}
+.descriptioin {
+	text-align: left;
+}
+#dd-course {
+	background-color: #fff !important;
+}
+#dd-course h2 {
+	color: #000;
+}
+#dd-course h3 {
+	font-size: 25px !important;
+	color: #000;
+}
+.dd-step .i-bordered {
+	line-height: 100px !important;
+}
+.dd-step .i-circled, .dd-step .i-bordered {
+	width: 104px !important;
+	height: 104px !important;
+}
+.process-steps li::before,
+.process-steps li::after {
+	border-top: 2px dashed #DDD;
+	top: 60px !important;
+}
+.process-steps li::after {
+	margin: 0 -52px 0 0 !important;
+}
+.process-steps li::before {
+	margin-left: -52px;
+}
+.table thead tr th {
+	font-size: 15px;
+}
+.table tbody tr td:first-child {
+	font-weight: bold;
+}
+table tbody tr td {
+	width: 15%;
+}
+.testimonial {
+    position: relative;
+    padding: 20px;
+    background-color: #FFF;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    border: none;
+}
+.testimonial p {
+	font-family: 'Open Sans';
+}
+#primary-menu li:hover {
+	background-color: #28F2B7;
+}
+#on-register-success {
+	display: none;
+}
+#on-register-error {
+	display: none;
+}
+#dd-student {
+	background-color: #099965;
+	color: #fff !important;
+}
+#dd-student .feature-box p, .feature-box h3, #dd-student h2 {
+	color: #fff;
+}
+#dd-promo1 {
+	background: url('../images/bg1.jpg') no-repeat center center;
+	background-attachment: fixed;
+	background-size: cover;
+}
+#dd-promo1 h2 {
+	color: #fff;
+}
+#dd-promo1 h2 span, h2 {
+	text-transform: uppercase;
+	color: yellow;
+}
+#dd-promo1 span {
+	color: #fff;
+}
+#dd-course .feature-box {
+	background-color: #E0FAFC;
+}
+.dd-course-advance {
+	background-color: #F37D7D !important;
+	color: #fff !important;
+}
+.dd-course-advance .fbox-icon i {
+	background-color: #1693A5;
+}
+.dd-course-advance h3 {
+	color: #fff !important;
+	border-bottom-color: #fff !important;
+}
+.content-wrap {
+	padding-bottom: 0px;
+}
+#primary-menu ul li a {
+	font-family: 'Open Sans';
+	letter-spacing: 0px;
+}
+#register {
+	background: url('../images/bg2.jpg') center center no-repeat;
+	background-size: cover;
+}
