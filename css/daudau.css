@@ -1,5 +1,33 @@
+/* trinity color */
+.tricolor1 {
+	color: rgb(0,150,0) !important;
+}
+.tribgcolor1 {
+	background-color: rgb(0,150,0) !important;
+}
+.tricolor2 {
+	color: rgb(245,134,52) !important;
+}
+.tribgcolor2 {
+	background-color: rgb(245,134,52) !important;
+}
 #slider h2 {
 	color: #002e5b;
+}
+#googleMap {
+	width:100%;
+	height:500px;
+}
+@media only screen and (max-width: 768px) {
+	#slider h2 {
+		font-size: 20px;		
+	}
+	.slider-caption {
+		font-size: 15px;
+	}
+	#googleMap {
+		height: 300px;
+	}
 }
 .swiper_wrapper {
 	height: 700px;
@@ -29,8 +57,7 @@
 	margin-bottom: 5px;
 }
 .team:hover h4 {
-	color: red;
-	text-decoration: underline;
+	color: rgb(245,134,52);
 }
 .icon-orange {
 	background-color: #FD7400 !important;
@@ -141,4 +168,30 @@ table tbody tr td {
 #register {
 	background: url('../images/bg2.jpg') center center no-repeat;
 	background-size: cover;
+}
+table th {
+	text-align: center;
+}
+/* lich khai giang mobile */
+.lichkg {
+	padding-left: 20px;
+	border-left: 7px solid;
+}
+.lichkg:nth-of-type(even) {
+    border-color: rgb(245,134,52);
+}
+.lichkg:nth-of-type(odd) {
+    border-color: rgb(0,150,0);
+}
+.lichkg h3 {
+	margin-bottom: 0;
+}
+.lichkg:nth-of-type(odd) h3 {
+	color:  rgb(0,150,0);
+}
+.lichkg:nth-of-type(even) h3 {
+	color: rgb(245,134,52);
+}
+.lichkg .iconlist {
+	margin-bottom: 0;
 }
