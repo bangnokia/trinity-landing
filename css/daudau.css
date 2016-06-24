@@ -5,11 +5,17 @@
 .tribgcolor1 {
 	background-color: rgb(0,150,0) !important;
 }
+.tribgcolor1rgba {
+	background-color: rgba(0,150,0, 0.6) !important;
+}
 .tricolor2 {
 	color: rgb(245,134,52) !important;
 }
 .tribgcolor2 {
 	background-color: rgb(245,134,52) !important;
+}
+.text-white {
+	color: #fff !important;
 }
 #slider h2 {
 	color: #002e5b;
@@ -30,7 +36,7 @@
 	}
 }
 .swiper_wrapper {
-	height: 700px;
+	height: 500px;
 }
 .heading-block {
 	margin-bottom: 0px;
@@ -48,7 +54,7 @@
 	color: #FFE11A;
 }
 .button-cta {
-	background-color: #FD7400;
+	background-color: rgb(245,134,52);
 }
 .text-red {
 	color: red;
@@ -93,8 +99,10 @@
 .process-steps li::before {
 	margin-left: -52px;
 }
-.table thead tr th {
+ .table thead tr th {
 	font-size: 15px;
+	color: #fff;
+	vertical-align: middle;
 }
 .table tbody tr td:first-child {
 	font-weight: bold;
@@ -102,6 +110,14 @@
 table tbody tr td {
 	width: 15%;
 }
+table tbody tr:hover {
+	background-color: rgb(245,134,52) !important;
+	color: #fff;
+}
+/* custom table */
+
+/* end */
+
 .testimonial {
     position: relative;
     padding: 20px;
@@ -152,7 +168,7 @@ table tbody tr td {
 	color: #fff !important;
 }
 .dd-course-advance .fbox-icon i {
-	background-color: #1693A5;
+	/* background-color: #1693A5; */
 }
 .dd-course-advance h3 {
 	color: #fff !important;
@@ -166,7 +182,7 @@ table tbody tr td {
 	letter-spacing: 0px;
 }
 #register {
-	background: url('../images/bg2.jpg') center center no-repeat;
+	background: url('../images/bg22.jpg') center center no-repeat;
 	background-size: cover;
 }
 table th {
@@ -194,4 +210,11 @@ table th {
 }
 .lichkg .iconlist {
 	margin-bottom: 0;
+}
+/* overwrite form register */
+.landing-wide-form {
+	background-color: rgba(255,255,255,0.3);
+}
+input:focus {
+	border-color: rgb(0, 150, 0);
 }
