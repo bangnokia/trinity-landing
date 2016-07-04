@@ -176,6 +176,7 @@ table tbody tr:hover {
 .dd-course-advance h3 {
 	color: #fff !important;
 	border-bottom-color: #fff !important;
+	letter-spacing: 0;
 }
 .button-white {
 	color: rgb(0,150,0);
@@ -228,4 +229,7 @@ table th {
 }
 input:focus {
 	border-color: rgb(0, 150, 0);
+}
+#copyrights {
+	color: #fff;
 }
