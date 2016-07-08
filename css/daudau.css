@@ -110,6 +110,9 @@
 .table tbody tr td:first-child {
 	font-weight: bold;
 }
+table tbody {
+	color: rgb(245,134,52);
+}
 table tbody tr td {
 	width: 15%;
 }
