@@ -3,16 +3,19 @@
 	color: rgb(0,150,0) !important;
 }
 .tribgcolor1 {
-	background-color: rgb(0,150,0) !important;
+	background-color: rgba(0, 143, 104, 1) !important;
 }
 .tribgcolor1rgba {
-	background-color: rgba(0,150,0, 0.6) !important;
+	background-color: rgba(0, 143, 104, 0.6) !important;
 }
 .tricolor2 {
 	color: rgb(245,134,52) !important;
 }
 .tribgcolor2 {
 	background-color: rgb(245,134,52) !important;
+}
+.tribgcolor3 {
+	background-color: #1bbc9b;
 }
 .button.tribgcolor2:hover {
 	background-color: rgb(0,150,0) !important;
@@ -36,6 +39,9 @@
 	}
 	#googleMap {
 		height: 300px;
+	}
+	.swiper-slide {
+		background-size: contain !important;
 	}
 }
 .swiper_wrapper {
@@ -148,8 +154,25 @@ table tbody tr:hover {
 	background-color: #099965;
 	color: #fff !important;
 }
+/*#dd-student feature-box:hover .feature-box h3 {
+	text-align: center;
+	transition: all 0.3s;
+} */
 #dd-student .feature-box p, .feature-box h3, #dd-student h2 {
 	color: #fff;
+}
+#dd-student h2 {
+	margin: 0 auto;
+	width: 500px;
+	background-color: rgb(0, 150, 0);
+}
+#dd-student .feature-box p, .feature-box h3 {
+	background-color: rgb(0, 150, 0);
+	padding: 5px;
+}
+#dd-student .feature-box p {
+	margin-top: 0;
+	min-height: 85px;
 }
 #dd-promo1 {
 	background: url('../images/bg1.jpg') no-repeat center center;
@@ -170,11 +193,13 @@ table tbody tr:hover {
 	background-color: #E0FAFC;
 }
 .dd-course-advance {
-	background-color: #FFA563 !important;
+	background-color: #1bbc9b !important;
 	color: #fff !important;
 }
 .dd-course-advance .fbox-icon i {
-	/* background-color: #1693A5; */
+	 background-color: #E0FAFC;
+	 border: 2px solid #1bbc9b;
+	 color: #1bbc9b;
 }
 .dd-course-advance h3 {
 	color: #fff !important;
@@ -188,6 +213,10 @@ table tbody tr:hover {
 	background-color: rgb(0,150,0) !important;
 	color: #fff;
 }
+.btn-last {
+	background-color: #E0FAFC;
+	color: #1bbc9b;
+}
 
 .content-wrap {
 	padding-bottom: 0px;
@@ -197,7 +226,9 @@ table tbody tr:hover {
 	letter-spacing: 0px;
 }
 #register {
-	background: url('../images/bg22.jpg') center center no-repeat;
+	/*background: url('../images/bg22.jpg') center center no-repeat;*/
+	background-image: linear-gradient(to bottom, rgba(48, 150, 149, 0.81), rgba(21, 97, 131, 0.42)), url(../images/bg22.jpg);
+
 	background-size: cover;
 }
 table th {
